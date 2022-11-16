@@ -31,10 +31,32 @@ export const player = reactive({
         return this.now_playing?.preview_url;
     },
     getNextSong(){
+        var index;
 
+        this.playlist.forEach((song, indexForSong) => {
+            if (song?.id == this.now_playing?.id) {
+                index = indexForSong++;
+                if (index < this.playlist.length) {
+                    return false;
+                } else {
+                    return this.playlist.song[index];
+                }
+            }
+        });
     },
     getPreviousSong() {
+        var index;
 
+        this.playlist.forEach((song, indexForSong) => {
+            if (song?.id == this.now_playing?.id) {
+                index = indexForSong--;
+                if (index < this.playlist.length) {
+                    return false;
+                } else {
+                    return this.playlist.song[index];
+                }
+            }
+        });
     },
     resetNowPlaying() {
         this.now_playing = {};
