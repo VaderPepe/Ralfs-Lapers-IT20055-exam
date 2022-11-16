@@ -22,7 +22,7 @@ export const auth = reactive({
 
 
     authenticate(email, password) {
-        if (email == "ralfskarlis.lapers@va.lv" && password == 'qwerty') {
+        if (email == 'ralfskarlis.lapers@va.lv' && password == 'qwerty') {
             localStorage.is_authenticated = true;
             this.is_authenticated = true;
             router.replace('/');
@@ -44,7 +44,7 @@ export const auth = reactive({
             this.user.favourite_songs += songID;
         }
 
-        localStorage.setItem("favSong", this.user.favourite_songs);
+        localStorage.setItem('favSong', this.user.favourite_songs);
     },
 
     getFavoriteSongs() {
