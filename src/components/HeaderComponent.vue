@@ -7,7 +7,7 @@
         <div class="wrapper-profile">
             <div class="section-user">
                 <span class="avatar"></span>
-                <h3 id="txt-full-name">NAME SURNAME</h3>
+                <h3 id="txt-full-name">RALFS KARLIS LAPERS</h3>
             </div>
             <button id="btn-logout">LOGOUT</button>
         </div>
